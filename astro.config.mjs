@@ -1,11 +1,14 @@
 import { defineConfig } from 'astro/config';
 import storyblok from '@storyblok/astro';
+import tailwind from '@astrojs/tailwind';
 
-// https://astro.build/config
 export default defineConfig({
   integrations: [
+    svelte(),
+    vue(),
+    react(),
     storyblok({
-      accessToken: 'vloML1TVw22P9nZLVqEWvgtt',
+      accessToken: 'x1lzDjnWQE3v0QvMm7DziQtt',
       components: {
         page: 'storyblok/Page',
         feature: 'storyblok/Feature',
@@ -13,5 +16,6 @@ export default defineConfig({
         teaser: 'storyblok/Teaser',
       },
     }),
+    tailwind(),
   ],
 });

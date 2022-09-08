@@ -1,16 +1,16 @@
 ---
-import { useStoryblokApi } from "@storyblok/astro";
-import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
- 
-const storyblokApi = useStoryblokApi();
+import { useStoryblokApi } from '@storyblok/astro'
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
 
-console.log(storyblokApi)
+const sbApi = useStoryblokApi()
+const { data } = await sbApi.get('cdn/stories/home', {
+  version: 'draft',
+})
 
-const { data } = await storyblokApi.get("cdn/stories/home", {
-  version: "draft",
-});
- 
-const story = data.story;
+const story = data.story
 ---
 
-<StoryblokComponent blok="{story.content}" />
+<BaseLayout>
+  <StoryblokComponent blok={story.content} />
+</BaseLayout>

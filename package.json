@@ -1,19 +1,23 @@
 {
-  "name": "@example/minimal",
-  "version": "0.0.1",
-  "private": true,
+  "name": "astro-sdk-demo",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "astro preview"
   },
   "dependencies": {
-    "@storyblok/astro": "^1.0.0",
-    "astro": "^1.1.7"
-  },
-  "devDependencies": {
-    "axios": "^0.27.2"
+    "@astrojs/react": "^1.1.1",
+    "@astrojs/svelte": "^1.0.0",
+    "@astrojs/tailwind": "^1.0.0",
+    "@astrojs/vue": "^1.0.0",
+    "@storyblok/astro": "1.0.0",
+    "astro": "^1.1.3",
+    "axios": "^0.27.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "svelte": "^3.49.0",
+    "vue": "^3.2.37"
   }
 }
